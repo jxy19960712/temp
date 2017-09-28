@@ -52,12 +52,9 @@
         },
         mounted() {
             for (let index in this.pieOptionArray) {
-
                 this.pieOptionArray[index].title = this.titleOptions(mockData[index].text)
                 this.pieOptionArray[index].series = this.chartSeriesData(mockData[index].value)
-                console.log(mockData[index].text)
             }
-
         },
         methods: {
             onReady(instance) {

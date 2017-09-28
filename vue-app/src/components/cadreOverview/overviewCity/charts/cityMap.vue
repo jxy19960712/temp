@@ -99,7 +99,10 @@
                         layoutCenter: ['50%', '50%'],
                         layoutSize: '700',
                         animation: false,
-                    }]
+                    },{
+
+					}]
+
                 }
             }
         },

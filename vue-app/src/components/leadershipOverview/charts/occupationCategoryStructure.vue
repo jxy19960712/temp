@@ -15,8 +15,6 @@
         value: [1, 3, 5, 7, 9, 11, 13],
     };
 
-    var yMax = 500;
-    var dataShadow = [];
     export default {
         props: ['title', 'chartData'],
         data() {
@@ -97,9 +95,9 @@
             onReady(instance) {
                 this.loadingFlag = false;
                 this.echarts = instance
-//				this.bar.series=Object.assign(this.bar.series[0],{
-//                    itemStyle:{
-//                        normal:{
+                this.bar.series = Object.assign(this.bar.series[0], {
+                    itemStyle: {
+                        normal: {
 //                            color: new IEcharts.graphic.LinearGradient(
 //                                0, 0, 0, 1,
 //                                [
@@ -108,9 +106,9 @@
 //                                    {offset: 1, color: '#188df0'}
 //                                ]
 //                            )
-//                        }
-//                    }
-//				})
+                        }
+                    }
+                })
                 console.log(instance);
             },
             getGradient(echarts){

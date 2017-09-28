@@ -18,7 +18,7 @@
 				</div>
 				<div class="overview-teamevaluation-wrapper">
 					<commonChartTitle title="性格特点与气质特点" titleStyle="triangle"></commonChartTitle>
-					<teamEvaluation :chartData="teamEvaluationData"></teamEvaluation>
+					<characterAndTemperament :chartData="characterAndTemperamentChartData"></characterAndTemperament>
 				</div>
 				<router-link class="common-navigatearrowleft-item iconfont icon-backward3" :to="{name:'overviewCity'}"></router-link>
 			</div>
@@ -71,6 +71,8 @@
     import commonOverviewTitle from '../common/commonOverviewTitle.vue'
     import commonChartTitle from '../common/commonChartTitle.vue'
     import teamEvaluation from './charts/teamEvaluation.vue'
+    import characterAndTemperament from './charts/characterAndTemperament.vue'
+
 
     import ageStructure from './charts/ageStructure.vue'
     import genderStructure from './charts/genderStructure.vue'
@@ -82,26 +84,13 @@
     import occupationCategoryStructure from './charts/occupationCategoryStructure.vue'
     import sourceStructure from './charts/sourceStructure.vue'
 
-
-
-    import cityMap from './charts/cityMap.vue'
-
-//    const ageStructureChartData = [
-//        {value: 2, name: '30-40岁'},
-//        {value: 5, name: '41-45岁'},
-//    ]
-//    const educationStructureChartData = [
-//        {value: 1, name: '中专及以下'},
-//        {value: 2, name: '大专'},
-//        {value: 3, name: '本科'},
-//        {value: 1, name: '研究生'}
-//    ];
     export default {
         components: {
             IEcharts,
             commonOverviewTitle,
             commonChartTitle,
             teamEvaluation,
+            characterAndTemperament,
 
             ageStructure,
             genderStructure,
@@ -169,6 +158,22 @@
                     {value: 61, name: '男'},
                     {value: 39, name: '女'},
                 ],
+                characterAndTemperamentChartData:[{
+                    name:'多血质',
+					value:100
+				},{
+                    name:'胆汁质',
+                    value:100
+                },{
+                    name:'抑郁质',
+                    value:100
+                },{
+                    name:'粘液质',
+                    value:100
+                },{
+                    name:'领袖型',
+                    value:100
+                }],
                 nationStructureChartData: [
                     {value: 65, name: '汉族'},
                     {value: 35, name: '少数民族'},
@@ -181,13 +186,12 @@
                 ],
                 specialtyChartData:[
                     {value: 4, name: '行政学'},
-                    {value: 6.8, name: '行政学'},
-                    {value: 19.5, name: '行政学'},
-                    {value: 22.1, name: '行政学'},
-                    {value: 6, name: '行政学'},
-                    {value: 13.6, name: '行政学'},
-                    {value: 7.9, name: '行政学'},
-                    {value: 20.7, name: '行政学'}
+                    {value: 6.8, name: '经贸'},
+                    {value: 19.5, name: '语言'},
+                    {value: 22.1, name: '行政管理'},
+                    {value: 6, name: '工商管理'},
+                    {value: 13.6, name: '信息管理'},
+                    {value: 7.9, name: '科学工程'}
                 ],
                 workExperienceStructureChartData: [
                     {value: 10, name: '科员及以下'},

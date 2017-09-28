@@ -1,10 +1,10 @@
 <template>
-	<div>
-		<div class="chart">
-			<label>{{title}}</label>
-			<IEcharts :option="pie" :loading="loadingFlag" @ready="onReady"></IEcharts>
-		</div>
-	</div>
+    <div>
+        <div class="chart">
+            <label>{{title}}</label>
+            <IEcharts :option="pie" :loading="loadingFlag" @ready="onReady"></IEcharts>
+        </div>
+    </div>
 </template>
 <script>
     import IEcharts from 'vue-echarts-v3/src/full.vue';
@@ -24,9 +24,9 @@
                         {
                             name: this.title,
                             type: 'pie',
-                            radius: ['0%','70%'],
+                            radius: ['0%', '70%'],
                             center: ['50%', '50%'],
-	                        minAngle: 0,
+                            minAngle: 0,
                             roseType: 'radius',
                             avoidLabelOverlap: true,
                             label: {
@@ -38,14 +38,14 @@
                             },
                             labelLine: {
                                 normal: {
-                                    show: false
+                                    show: true
                                 }
                             },
                             data: this.chartData.sort(function (a, b) { return a.value - b.value; })
                         }
                     ],
-                    color: ['#ff5959','#fe6c31','#ba3837','#fe8989','#fe986b','#fd7a06','#13bfed','#d64d79']
-                },
+                    color: ['#ff5959', '#fe6c31', '#ba3837', '#fe8989', '#fe986b', '#fd7a06', '#13bfed', '#d64d79']
+                }
             }
         },
         components: {
@@ -57,7 +57,6 @@
         methods: {
             onReady(instance) {
                 this.loadingFlag = false;
-
                 console.log(instance);
             },
         }
