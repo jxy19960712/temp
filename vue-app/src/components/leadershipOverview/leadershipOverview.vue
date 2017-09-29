@@ -16,7 +16,7 @@
 					<commonChartTitle title="班子考评" titleStyle="triangle"></commonChartTitle>
 					<teamEvaluation :chartData="teamEvaluationData"></teamEvaluation>
 				</div>
-				<div class="overview-teamevaluation-wrapper">
+				<div class="overview-characterAndTemperament-wrapper">
 					<commonChartTitle title="性格特点与气质特点" titleStyle="triangle"></commonChartTitle>
 					<characterAndTemperament :chartData="characterAndTemperamentChartData"></characterAndTemperament>
 				</div>
@@ -243,7 +243,7 @@
             onReady(instance) {
                 this.loadingFlag = false;
 
-                console.log(instance);
+
             },
             onClick(event, instance, echarts) {
                 console.log(arguments);

@@ -9,24 +9,41 @@
 <script>
     import IEcharts from 'vue-echarts-v3/src/full.vue';
 
-    
-    var dataAxis = ['村级领导', '乡级领导', '县级领导', '市级领导', '省级领导'];
-    var data = [1, 3, 5, 7, 9];
-    var yMax = 500;
-    var dataShadow = [];
+	var data={
+	    name:['村级领导', '乡级领导', '县级领导', '市级领导', '省级领导'],
+		value:[1, 3, 5, 7, 9]
+	}
+//    var dataAxis = ['村级领导', '乡级领导', '县级领导', '市级领导', '省级领导'];
+//    var data = [1, 3, 5, 7, 9];
     export default {
         props: ['title', 'chartData'],
         data() {
             return {
                 loadingFlag: true,
-                bar: {
+                bar:{}
+            }
+        },
+        components: {
+            IEcharts
+        },
+        mounted() {
+        },
+        methods: {
+            onReady(instance,echarts) {
+                this.loadingFlag = false;
+				this.getOptions(echarts)
+            },
+            getOptions(echarts){
+                let options = {
                     xAxis: {
-                        data: dataAxis,
+                        data: data.name,
                         axisLabel: {
                             inside: false,
+							interval:0,
                             textStyle: {
+                                interval: 0,
                                 color: '#fff',
-                                fontSize:'10px'
+                                fontSize: 12
                             }
                         },
                         axisTick: {
@@ -60,37 +77,29 @@
                             type: 'bar',
                             itemStyle: {
                                 normal: {
-                                    color: '#fff',
-
-                                },
-                                emphasis: {
-                                    color: '#fff'
+                                    color: new echarts.graphic.LinearGradient(
+                                        0, 0, 0, 1,
+                                        [
+                                            {offset: 0, color: '#a249ff'},
+                                            {offset: 1, color: '#3874fd'}
+                                        ]
+                                    )
                                 }
                             },
-	                        label:{
-                                normal:{
-                                    fontWeight:'bolder',
-                                    fontSize:233
+                            label: {
+                                normal: {
+                                    fontWeight: 'bolder',
+                                    fontSize: 23
                                 }
-	                        },
-                            barWidth:10,
-                            data: data
+                            },
+                            barWidth: 20,
+                            data: data.value
                         }
                     ]
-                },
+                }
+                this.bar = options;
+                return options;
             }
-        },
-        components: {
-            IEcharts
-        },
-        mounted() {
-        },
-        methods: {
-            onReady(instance) {
-                this.loadingFlag = false;
-
-                console.log(instance);
-            },
         }
     }
 </script>

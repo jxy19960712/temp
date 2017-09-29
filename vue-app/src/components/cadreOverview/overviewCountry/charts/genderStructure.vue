@@ -71,7 +71,7 @@
         methods: {
             onReady(instance) {
                 this.loadingFlag = false;
-                console.log(instance);
+
             },
             getLegendData() {
                 let result = [];

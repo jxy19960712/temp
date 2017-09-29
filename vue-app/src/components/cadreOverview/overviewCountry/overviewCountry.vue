@@ -171,7 +171,7 @@
             },
             onReady(instance) {
                 this.loadingFlag = false;
-                console.log(instance);
+
             },
             onClick(event, instance, echarts) {
                 console.log(arguments);

@@ -55,7 +55,7 @@
             onReady(instance) {
                 this.loadingFlag = false;
 
-                console.log(instance);
+
             },
         }
     }

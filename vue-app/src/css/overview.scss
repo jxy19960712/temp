@@ -240,6 +240,21 @@
     }
 }
 
+.overview-characterAndTemperament-wrapper{
+    width:100%;
+    height:240px;
+    .chart {
+        width: 100%;
+        height: 200px;
+    }
+    .chart > div {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+
+    }
+}
+
 .overview-leadershipcharacteristic-container {
     width: 100%;
     .overview-leadershipcharacteristic-item {
@@ -254,4 +269,5 @@
         }
     }
 }
+
 
