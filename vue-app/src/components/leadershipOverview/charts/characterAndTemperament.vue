@@ -1,68 +1,49 @@
 <template>
 	<div class="chart">
-		<IEcharts :option="scatterOption" :loading="loadingFlag" @ready="onReady"></IEcharts>
+		<!--<svg width="650" height="200" font-family="sans-serif" font-size="10" text-anchor="middle"></svg>-->
 	</div>
 </template>
 <script>
-    import IEcharts from 'vue-echarts-v3/src/full.vue';
     import data from './life-expectancy.json';
+    import * as d3 from '../../../assets/js/d3.min.js';
 
     //模拟数据
-    var itemStyle = {
-        normal: {
-            opacity: 0.8,
-            shadowBlur: 10,
-            shadowOffsetX: 0,
-            shadowOffsetY: 0,
-            shadowColor: 'rgba(0, 0, 0, 0.5)'
-        }
-    };
+	const charistic=[{
+        name:'多血质',
+        value:200
+    },{
+        name:'多血质',
+        value:150
+    },{
+        name:'多血质',
+        value:100
+    },{
+        name:'多血质',
+        value:50
+    }]
 
-    var sizeFunction = function (x) {
-        var y = Math.sqrt(x / 5e8) + 0.1;
-        return y * 80;
-    };
-    // Schema:
-    var schema = [
-        {name: 'Income', index: 0, text: '人均收入', unit: '美元'},
-        {name: 'LifeExpectancy', index: 1, text: '人均寿命', unit: '岁'},
-        {name: 'Population', index: 2, text: '总人口', unit: ''},
-        {name: 'Country', index: 3, text: '国家', unit: ''}
-    ];
     export default {
         props: ['title', 'chartData'],
         data() {
             return {
                 loadingFlag: true,
-                scatterOption: {
-                    series: [
-                        {
-                            type: 'pie',
-                            itemStyle: itemStyle,
-                            data: data.series[0],
-                            symbolSize: function(val) {
-                                return sizeFunction(val[2]);
-                            }
-                        }
-                    ],
-                    animationDurationUpdate: 1000,
-                    animationEasingUpdate: 'quinticInOut'
-                }
+
             }
         },
         components: {
-            IEcharts
+
         },
         mounted() {
-
+			this.makebubbles();
         },
         methods: {
-            onReady(instance) {
-                this.loadingFlag = false;
-                this.makePies();
-            },
-			makePies(){
-
+			makebubbles(){
+			    console.log(d3)
+                var svg=d3.select('.overview-characterAndTemperament-wrapper .chart').append('svg').attr('width',650).attr('height',200)
+				for (var index in charistic){
+			        const originCoordin=200;
+                    svg.append('circle').attr('cx',charistic[index].value+'px').attr('cy',charistic[index].value+'px').attr('r',charistic[index].value/2).attr('fill','red')
+				}
 			}
         }
     }
