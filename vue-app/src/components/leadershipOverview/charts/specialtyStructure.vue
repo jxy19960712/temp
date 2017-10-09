@@ -52,7 +52,6 @@
             IEcharts
         },
         mounted() {
-            console.log(this.chartData)
         },
         methods: {
             onReady(instance) {

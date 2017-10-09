@@ -207,3 +207,25 @@ a.disabled:hover, button.disabled:hover {
     border-color: #888;
     border-style: solid;
 }
+/*~~~~~~~~~~common-common-legend-wrapper-container~~~~~~~~~~*/
+.common-legend-wrapper{
+    width:100%;
+    font-size: 13px;
+    li{
+        display: inline-block;
+        margin:0 5px;
+    }
+    span{
+        display: inline-block;
+        width:10px;
+        height:10px;
+        border-radius:50%;
+    }
+    label{
+        color: #ccc;
+    }
+}
+/*~~~~~~~~~~common-packlayouttitle-item~~~~~~~~~~*/
+.common-packlayouttitle-item{
+    font-size: 15px;
+}

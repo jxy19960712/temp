@@ -16,7 +16,7 @@
 					<commonChartTitle title="班子考评" titleStyle="triangle"></commonChartTitle>
 					<teamEvaluation :chartData="teamEvaluationData"></teamEvaluation>
 				</div>
-				<div class="overview-characterAndTemperament-wrapper">
+				<div class="overview-characterandtemperament-wrapper">
 					<commonChartTitle title="性格特点与气质特点" titleStyle="triangle"></commonChartTitle>
 					<characterAndTemperament :chartData="characterAndTemperamentChartData"></characterAndTemperament>
 				</div>
@@ -39,9 +39,9 @@
 					<commonChartTitle title="年龄结构" titleStyle="underline"></commonChartTitle>
 					<ageStructure title="年龄结构" :chartData="ageStructureChartData"></ageStructure>
 				</div>
-				<div class="overview-leadershipcharacteristic-item">
-					<commonChartTitle title="年龄结构" titleStyle="underline"></commonChartTitle>
-					<nationStructure title="年龄结构" :chartData="ageStructureChartData"></nationStructure>
+				<div class="overview-nationstructure-item">
+					<commonChartTitle title="民族结构" titleStyle="underline"></commonChartTitle>
+					<nationStructure title="民族结构" :chartData="ageStructureChartData"></nationStructure>
 				</div>
 				<div class="overview-leadershipcharacteristic-item">
 					<commonChartTitle title="性别结构" titleStyle="underline"></commonChartTitle>
