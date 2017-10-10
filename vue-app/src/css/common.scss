@@ -1,231 +1,251 @@
 heml, body {
-    color: #fff;
-    height: 100%;
+  color: #fff;
+  height: 100%;
 }
 
 input {
-    outline: none;
+  outline: none;
 }
 
 textarea {
-    padding: 0;
-    resize: none;
+  padding: 0;
+  resize: none;
 }
 
 .active {
-    display: block;
+  display: block;
 }
 
 .is-danger {
-    color: red;
-    font-size: 12px;
+  color: red;
+  font-size: 12px;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 a.disabled, button.disabled, .disabled {
-    color: #fff;
-    border-color: #e8e8e8;
-    cursor: not-allowed;
+  color: #fff;
+  border-color: #e8e8e8;
+  cursor: not-allowed;
 }
 
 .common-btn-item.disabled {
-    background-color: #e8e8e8;
-    border: 1px solid #e8e8e8;
+  background-color: #e8e8e8;
+  border: 1px solid #e8e8e8;
 }
 
 a.disabled:hover, button.disabled:hover {
-    text-decoration: none;
-    background-color: #e8e8e8;
-    border-color: #e8e8e8;
+  text-decoration: none;
+  background-color: #e8e8e8;
+  border-color: #e8e8e8;
 }
 
 /*~~~~~~~~~~common-title-container~~~~~~~~~~*/
 .common-title-container {
-    padding: 20px 0;
-    width: 100%;
-    font-size: 0;
-    text-align: left;
-    overflow: hidden;
+  padding: 20px 0;
+  width: 100%;
+  font-size: 0;
+  text-align: left;
+  overflow: hidden;
 }
 
 .common-title-container .title {
-    display: inline-block;
-    margin: 0 0 0 45px;
-    /*width:72%;*/
-    text-align: left;
-    font-size: 24px;
-    vertical-align: middle;
+  display: inline-block;
+  margin: 0 0 0 45px;
+  /*width:72%;*/
+  text-align: left;
+  font-size: 24px;
+  vertical-align: middle;
 }
 
 .common-title-container .title span {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background: url(/src/image/titlelogo_00000.png) no-repeat;
-    vertical-align: middle;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(/src/image/titlelogo_00000.png) no-repeat;
+  vertical-align: middle;
 }
 
 .common-title-container .title label {
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .common-title-container .desc {
-    display: inline-block;
-    float: right;
-    margin: 0 40px 0 0;
-    width: 20%;
-    min-width: 390px;
-    text-align: left;
-    font-size: 24px;
-    vertical-align: middle;
+  display: inline-block;
+  float: right;
+  margin: 0 40px 0 0;
+  width: 20%;
+  min-width: 390px;
+  text-align: left;
+  font-size: 24px;
+  vertical-align: middle;
 }
 
 .common-title-container .desc span {
-    display: inline-block;
-    margin: 0 10px 0 0;
-    width: 160px;
-    height: 30px;
-    background-image: url(/src/image/ganbuyunlogo_00000.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    vertical-align: middle;
-    position: relative;
+  display: inline-block;
+  margin: 0 10px 0 0;
+  width: 160px;
+  height: 30px;
+  background-image: url(/src/image/ganbuyunlogo_00000.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  position: relative;
 }
 
 .common-title-container .desc span:after {
-    content: '';
-    display: inline-block;
-    margin: 0 25px;
-    width: 2px;
-    height: 30px;
-    background: #fff;
-    position: absolute;
-    left: 120px;
+  content: '';
+  display: inline-block;
+  margin: 0 25px;
+  width: 2px;
+  height: 30px;
+  background: #fff;
+  position: absolute;
+  left: 120px;
 }
 
 .common-title-container .desc label {
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /*~~~~~~~~~~common-navigatearrow-item~~~~~~~~~~*/
 .common-navigatearrowleft-item, .common-navigatearrowright-item {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    font-size: 45px;
-    color: #ccc;
-    text-align: center;
-    position: absolute;
-    bottom: 20px;
-    z-index: 1;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 45px;
+  color: #ccc;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  z-index: 1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .common-navigatearrowleft-item {
-    left: 30px;
+  left: 30px;
 
 }
 
 .common-navigatearrowright-item {
-    right: 30px;
+  right: 30px;
 }
 
 .common-navigatearrowleft-item:hover, .common-navigatearrowright-item:hover {
-    color: #fff;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+  color: #fff;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 /*~~~~~~~~~~common-operationbutton-item~~~~~~~~~~*/
 .common-operationbutton-item {
-    display: inline-block;
+  display: inline-block;
 }
 
 .common-operationbutton-item a span {
-    color: #88e2ef;
-    font-size: 20px;
+  color: #88e2ef;
+  font-size: 20px;
 }
 
 .common-operationbutton-item label {
-    color: #88e2ef;
-    cursor: pointer;
+  color: #88e2ef;
+  cursor: pointer;
 }
 
 .common-operationbutton-item .underline {
-    display: block;
-    width: 120px;
-    line-height: 5px;
+  display: block;
+  width: 120px;
+  line-height: 5px;
 }
 
 .common-operationbutton-item .underline i {
-    display: inline-block;
-    margin: 0 0 0 2px;
-    width: 25px;
-    height: 6px;
+  display: inline-block;
+  margin: 0 0 0 2px;
+  width: 25px;
+  height: 6px;
 
 }
 
 /*~~~~~~~~~~common-charttitle-container~~~~~~~~~~*/
 .common-charttitle-container {
-    display: block;
-    font-size: 18px;
-    text-align: left;
+  display: block;
+  font-size: 18px;
+  text-align: left;
 }
 
 .common-charttitle-container label {
-    text-align: left;
+  text-align: left;
 }
 
 .common-charttitle-container .triangle span {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 6px 0 6px 8px;
-    border-color: transparent transparent transparent #fff;
-    vertical-align: middle;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 0 6px 8px;
+  border-color: transparent transparent transparent #fff;
+  vertical-align: middle;
+}
+
+.common-charttitle-container .rectangle span {
+  display: inline-block;
+  width: 5px;
+  height: 16px;
+  background-color: #fff;
+  vertical-align: middle;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -2px;
+    width: 1px;
+    height: 16px;
+    background-color: #fff;
+  }
 }
 
 .common-charttitle-container .underline {
-    display: block;
-    padding: 0 0 10px 0;
-    width: 100%;
-    border-width: 0 0 1px 0;
-    border-color: #888;
-    border-style: solid;
+  display: block;
+  padding: 0 0 10px 0;
+  width: 100%;
+  border-width: 0 0 1px 0;
+  border-color: #888;
+  border-style: solid;
 }
+
 /*~~~~~~~~~~common-common-legend-wrapper-container~~~~~~~~~~*/
-.common-legend-wrapper{
-    width:100%;
-    font-size: 13px;
-    li{
-        display: inline-block;
-        margin:0 5px;
-    }
-    span{
-        display: inline-block;
-        width:10px;
-        height:10px;
-        border-radius:50%;
-    }
-    label{
-        color: #ccc;
-    }
+.common-legend-wrapper {
+  width: 100%;
+  font-size: 13px;
+  li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  label {
+    color: #ccc;
+  }
 }
+
 /*~~~~~~~~~~common-packlayouttitle-item~~~~~~~~~~*/
-.common-packlayouttitle-item{
-    font-size: 15px;
+.common-packlayouttitle-item {
+  font-size: 15px;
 }

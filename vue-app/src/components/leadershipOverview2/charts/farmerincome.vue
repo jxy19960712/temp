@@ -1,18 +1,18 @@
 <template>
-	<div class="chart">
-		<label>{{title}}</label>
-		<IEcharts :option="bar" :loading="loadingFlag" @ready="onReady"></IEcharts>
-	</div>
+    <div class="chart">
+        <label>{{title}}</label>
+        <IEcharts :option="bar" :loading="loadingFlag" @ready="onReady"></IEcharts>
+    </div>
 </template>
 <script>
     import IEcharts from 'vue-echarts-v3/src/full.vue';
 
-	var data={
-	    name:['村级领导', '乡级领导', '县级领导', '市级领导', '省级领导'],
-		value:[1, 3, 5, 7, 9]
-	}
-//    var dataAxis = ['村级领导', '乡级领导', '县级领导', '市级领导', '省级领导'];
-//    var data = [1, 3, 5, 7, 9];
+    var data={
+        name:['村级领导', '乡级领导', '县级领导', '市级领导', '省级领导'],
+        value:[1, 3, 5, 7, 9]
+    }
+    //    var dataAxis = ['村级领导', '乡级领导', '县级领导', '市级领导', '省级领导'];
+    //    var data = [1, 3, 5, 7, 9];
     export default {
         props: ['title', 'chartData'],
         data() {
@@ -29,7 +29,7 @@
         methods: {
             onReady(instance,echarts) {
                 this.loadingFlag = false;
-				this.getOptions(echarts)
+                this.getOptions(echarts)
             },
             getOptions(echarts){
                 let options = {
@@ -37,7 +37,7 @@
                         data: data.name,
                         axisLabel: {
                             inside: false,
-							interval:0,
+                            interval:0,
                             textStyle: {
                                 interval: 0,
                                 color: '#fff',

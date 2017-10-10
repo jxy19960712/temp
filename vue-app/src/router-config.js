@@ -4,7 +4,7 @@ import cadreOverview from './components/cadreOverview/cadreOverview.vue'
 import overviewCity from './components/cadreOverview/overviewCity/overviewCity.vue'
 import overviewCountry  from './components/cadreOverview/overviewCountry/overviewCountry.vue'
 import leadershipOverview  from './components/leadershipOverview/leadershipOverview.vue'
-
+import leadershipOverview2 from './components/leadershipOverview2/leadershipOverview2.vue'
 
 
 const routes = [{
@@ -28,6 +28,10 @@ const routes = [{
     name:'leadershipOverview',
     path:'/leadershipOverview',
     component:leadershipOverview
+},{
+    name:'leadershipOverview2',
+    path:'/leadershipOverview2',
+    component:leadershipOverview2
 }]
 
 const router = new vueRouter({
