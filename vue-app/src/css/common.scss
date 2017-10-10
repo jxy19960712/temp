@@ -198,6 +198,10 @@ a.disabled:hover, button.disabled:hover {
     border-color: transparent transparent transparent #fff;
     vertical-align: middle;
 }
+.common-charttitle-container .rectangle span{
+    display: inline-block;
+
+}
 
 .common-charttitle-container .underline {
     display: block;
@@ -228,4 +232,7 @@ a.disabled:hover, button.disabled:hover {
 /*~~~~~~~~~~common-packlayouttitle-item~~~~~~~~~~*/
 .common-packlayouttitle-item{
     font-size: 15px;
+}
+.rectangle{
+
 }

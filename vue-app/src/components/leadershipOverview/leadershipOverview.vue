@@ -59,7 +59,7 @@
 					<commonChartTitle title="来源结构" titleStyle="underline"></commonChartTitle>
 					<sourceStructure title="来源结构" :chartData="sourceStructureChartData"></sourceStructure>
 				</div>
-				<router-link class="common-navigatearrowright-item iconfont icon-forward3" :to="{name:'leadershipOverview'}"></router-link>
+				<router-link class="common-navigatearrowright-item iconfont icon-forward3" :to="{name:'leadershipOverview2'}"></router-link>
 			</div>
 		</div>
 	</div>
